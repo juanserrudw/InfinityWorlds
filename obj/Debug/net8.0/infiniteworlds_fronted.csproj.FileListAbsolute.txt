@@ -143,3 +143,4 @@ E:\laptop\Sena\Fase Ejecucion\guia7\Code\infiniteworlds_fronted\bin\Debug\net8.0
 E:\laptop\Sena\Fase Ejecucion\guia7\Code\infiniteworlds_fronted\bin\Debug\net8.0\Newtonsoft.Json.dll
 E:\laptop\Sena\Fase Ejecucion\guia7\Code\infiniteworlds_fronted\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 E:\laptop\Sena\Fase Ejecucion\guia7\Code\infiniteworlds_fronted\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+E:\laptop\Sena\Fase Ejecucion\guia7\Code\infiniteworlds_fronted\obj\Debug\net8.0\infiniteworlds_fronted.sourcelink.json

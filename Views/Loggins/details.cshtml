@@ -1,0 +1,30 @@
+@model infiniteworlds_frontend.Models.Loggin
+
+@{
+    ViewData["Title"] = "Loggin Details";
+}
+
+<h1>Loggin Details</h1>
+
+<div>
+    <h4>Loggin</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Loggin ID</dt>
+        <dd class="col-sm-10">@Model.LogginId</dd>
+
+        <dt class="col-sm-2">User ID</dt>
+        <dd class="col-sm-10">@Model.UserId</dd>
+
+        <dt class="col-sm-2">Authentication ID</dt>
+        <dd class="col-sm-10">@Model.AuthenticationId</dd>
+
+        <dt class="col-sm-2">Login Time</dt>
+        <dd class="col-sm-10">@Model.LoginTime.ToString("g")</dd>
+
+        <dt class="col-sm-2">Success</dt>
+        <dd class="col-sm-10">@Model.Success</dd>
+    </dl>
+
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

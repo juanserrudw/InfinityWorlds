@@ -1,0 +1,49 @@
+@model infiniteworlds_frontend.Models.Player
+
+@{
+    ViewData["Title"] = "Player Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>Player</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.PlayerId)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.PlayerId)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.EstadoCuenta)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.EstadoCuenta)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+        @* <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.User.Username) <!-- Asumiendo que el modelo User tiene una propiedad Username -->
+        </dd> *@
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Game)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Game.Name) <!-- Asumiendo que el modelo Game tiene una propiedad Name -->
+        </dd>
+    </dl>
+</div>
+
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.PlayerId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</p>

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("infiniteworlds_fronted")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+610505ebd413be7dbe3f0bed3d69ea9d3a3905a0")]
 [assembly: System.Reflection.AssemblyProductAttribute("infiniteworlds_fronted")]
 [assembly: System.Reflection.AssemblyTitleAttribute("infiniteworlds_fronted")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

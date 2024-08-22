@@ -18,12 +18,72 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\laptop\Sena\Fase Ejecucion\guia7\Code\infiniteworlds_fronted
 build_property._RazorSourceGeneratorDebug = 
 
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Games/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Games/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Games/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Games/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Games/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Loggins/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nZ2luc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Loggins/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nZ2luc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Loggins/details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nZ2luc1xkZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Loggins/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nZ2luc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Loggins/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nZ2luc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Players/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWVyc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Players/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWVyc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Players/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWVyc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Players/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWVyc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Players/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWVyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/laptop/Sena/Fase Ejecucion/guia7/Code/infiniteworlds_fronted/Views/Shared/Error.cshtml]

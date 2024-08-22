@@ -1,0 +1,42 @@
+@model infiniteworlds_frontend.Models.Loggin
+
+@{
+    ViewData["Title"] = "Create Loggin";
+}
+
+<h1>Create Loggin</h1>
+
+<h4>Loggin</h4>
+<hr />
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="UserId" class="control-label"></label>
+        <input asp-for="UserId" class="form-control" />
+        <span asp-validation-for="UserId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AuthenticationId" class="control-label"></label>
+        <input asp-for="AuthenticationId" class="form-control" />
+        <span asp-validation-for="AuthenticationId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LoginTime" class="control-label"></label>
+        <input asp-for="LoginTime" class="form-control" type="datetime-local" />
+        <span asp-validation-for="LoginTime" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Success" class="control-label"></label>
+        <input asp-for="Success" class="form-control" type="checkbox" />
+        <span asp-validation-for="Success" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>
