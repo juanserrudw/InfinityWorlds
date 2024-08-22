@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\infiniteworlds_fronted.props" />
+</Project>

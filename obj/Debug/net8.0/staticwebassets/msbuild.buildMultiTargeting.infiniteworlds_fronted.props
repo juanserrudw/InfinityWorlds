@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\infiniteworlds_fronted.props" />
+</Project>
