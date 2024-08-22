@@ -101,49 +101,49 @@ namespace infiniteworlds_frontend.Controllers
 
             return NoContent(); // 204 No Content
         }
-   
-   
-   [HttpPatch("{id}")]
-public async Task<IActionResult> PatchUser(int id, [FromBody] JsonPatchDocument<User> patchDoc)
-{
-    if (patchDoc == null)
-    {
-        return BadRequest("Patch document is null.");
-    }
 
-    var user = await _context.Users.FindAsync(id);
-    if (user == null)
-    {
-        return NotFound();
-    }
 
-    // Aplicar el parche al usuario encontrado
-    patchDoc.ApplyTo(user, ModelState);
-
-    // Verificar el estado del modelo después de aplicar el parche
-    if (!ModelState.IsValid)
-    {
-        return BadRequest(ModelState);
-    }
-
-    try
-    {
-        await _context.SaveChangesAsync();
-    }
-    catch (DbUpdateConcurrencyException)
-    {
-        if (!UserExists(id))
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PatchUser(int id, [FromBody] JsonPatchDocument<User> patchDoc)
         {
-            return NotFound();
-        }
-        else
-        {
-            throw;
-        }
-    }
+            if (patchDoc == null)
+            {
+                return BadRequest("Patch document is null.");
+            }
 
-    return NoContent(); // Utiliza NoContent() para indicar que la solicitud fue exitosa pero no devuelve contenido
-}
+            var user = await _context.Users.FindAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            // Aplicar el parche al usuario encontrado
+            patchDoc.ApplyTo(user, ModelState);
+
+            // Verificar el estado del modelo después de aplicar el parche
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UserExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent(); // Utiliza NoContent() para indicar que la solicitud fue exitosa pero no devuelve contenido
+        }
 
 
 

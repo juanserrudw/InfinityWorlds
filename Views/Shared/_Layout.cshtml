@@ -1,35 +1,71 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - infiniteworlds_fronted</title>
+    <title>@ViewData["Title"] - InfiniteWorlds</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/infiniteworlds_fronted.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sitepage.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/css/infiniteworlds_fronted.styles.css" asp-append-version="true" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">infiniteworlds_fronted</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a href="#" class="navbar-brand">InfinityWorlds</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS"
+                    aria-controls="navbarS" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+
+                <div class="collapse navbar-collapse" id="navbarS">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a href="#" class="nav-link">Quienes Somos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a href="#game" class="nav-link">Juegos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#section-soporte" class="nav-link">Soporte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Noticias</a>
+                        </li>
+                        <!-- Dropdown para Inicio de Sesión y Registro -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-person-circle" title="Cuenta"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end navbar-dark bg-dark" aria-labelledby="navbarDropdown">
+                                <!-- Link para Login -->
+                                <li>
+                                    <a class="dropdown-item" asp-controller="Users" asp-action="Login">Login</a>
+                                </li>
+                                <!-- Link para Registro -->
+                                <li>
+                                    <a class="dropdown-item" asp-controller="Users" asp-action="Register">Registrarse</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -38,12 +74,14 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - infiniteworlds_fronted - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - InfiniteWorlds - <a asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

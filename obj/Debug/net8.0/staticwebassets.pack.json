@@ -5,8 +5,24 @@
       "PackagePath": "staticwebassets\\infiniteworlds_fronted.bundle.scp.css"
     },
     {
+      "Id": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\infiniteworlds_fronted\\wwwroot\\css\\images\\Imagen1.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\Imagen1.jpg"
+    },
+    {
+      "Id": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\infiniteworlds_fronted\\wwwroot\\css\\images\\anewdivine.png",
+      "PackagePath": "staticwebassets\\css\\images\\anewdivine.png"
+    },
+    {
+      "Id": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\infiniteworlds_fronted\\wwwroot\\css\\images\\imagen2.jpg",
+      "PackagePath": "staticwebassets\\css\\images\\imagen2.jpg"
+    },
+    {
       "Id": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\infiniteworlds_fronted\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\infiniteworlds_fronted\\wwwroot\\css\\sitepage.css",
+      "PackagePath": "staticwebassets\\css\\sitepage.css"
     },
     {
       "Id": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\infiniteworlds_fronted\\wwwroot\\favicon.ico",

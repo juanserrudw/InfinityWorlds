@@ -56,42 +56,42 @@ namespace infiniteworlds_frontend.Controllers
 
         // PUT: api/Users/5
         // PUT: api/Loggins/5
-[HttpPut("{id}")]
-public async Task<IActionResult> Edit(int id, [FromBody] Loggin loggin)
-{
-    if (id != loggin.LogginId)
-    {
-        return BadRequest();
-    }
-
-    if (ModelState.IsValid)
-    {
-        try
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Edit(int id, [FromBody] Loggin loggin)
         {
-            _context.Update(loggin); // Actualiza el registro en la base de datos
-            await _context.SaveChangesAsync(); // Guarda los cambios
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            if (!LogginExists(loggin.LogginId))
+            if (id != loggin.LogginId)
             {
-                return NotFound();
+                return BadRequest();
             }
-            else
-            {
-                throw;
-            }
-        }
-        return NoContent(); // Utiliza NoContent() para indicar que la solicitud fue exitosa pero no devuelve contenido
-    }
-    return BadRequest(ModelState);
-}
 
-// Método auxiliar para verificar si el registro Loggin existe
-private bool LogginExists(int id)
-{
-    return _context.Loggins.Any(e => e.LogginId == id);
-}
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(loggin); // Actualiza el registro en la base de datos
+                    await _context.SaveChangesAsync(); // Guarda los cambios
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!LogginExists(loggin.LogginId))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return NoContent(); // Utiliza NoContent() para indicar que la solicitud fue exitosa pero no devuelve contenido
+            }
+            return BadRequest(ModelState);
+        }
+
+        // Método auxiliar para verificar si el registro Loggin existe
+        private bool LogginExists(int id)
+        {
+            return _context.Loggins.Any(e => e.LogginId == id);
+        }
 
 
 
@@ -110,50 +110,50 @@ private bool LogginExists(int id)
 
             return NoContent(); // 204 No Content
         }
-   
-   
-   // PATCH: api/Loggins/5
-[HttpPatch("{id}")]
-public async Task<IActionResult> PatchLogin(int id, [FromBody] JsonPatchDocument<Loggin> patchDoc)
-{
-    if (patchDoc == null)
-    {
-        return BadRequest("Patch document is null.");
-    }
 
-    var loggin = await _context.Loggins.FindAsync(id);
-    if (loggin == null)
-    {
-        return NotFound();
-    }
 
-    // Aplicar el parche al objeto Loggin encontrado
-    patchDoc.ApplyTo(loggin, ModelState);
-
-    // Verificar el estado del modelo después de aplicar el parche
-    if (!ModelState.IsValid)
-    {
-        return BadRequest(ModelState);
-    }
-
-    try
-    {
-        await _context.SaveChangesAsync(); // Guardar los cambios en la base de datos
-    }
-    catch (DbUpdateConcurrencyException)
-    {
-        if (!LogginExists(id))
+        // PATCH: api/Loggins/5
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PatchLogin(int id, [FromBody] JsonPatchDocument<Loggin> patchDoc)
         {
-            return NotFound();
-        }
-        else
-        {
-            throw;
-        }
-    }
+            if (patchDoc == null)
+            {
+                return BadRequest("Patch document is null.");
+            }
 
-    return NoContent(); // Utiliza NoContent() para indicar que la solicitud fue exitosa pero no devuelve contenido
-}
+            var loggin = await _context.Loggins.FindAsync(id);
+            if (loggin == null)
+            {
+                return NotFound();
+            }
+
+            // Aplicar el parche al objeto Loggin encontrado
+            patchDoc.ApplyTo(loggin, ModelState);
+
+            // Verificar el estado del modelo después de aplicar el parche
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                await _context.SaveChangesAsync(); // Guardar los cambios en la base de datos
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!LogginExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent(); // Utiliza NoContent() para indicar que la solicitud fue exitosa pero no devuelve contenido
+        }
 
 
     }
