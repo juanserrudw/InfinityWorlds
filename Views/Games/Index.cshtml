@@ -1,20 +1,20 @@
 @model IEnumerable<infiniteworlds_frontend.Models.Game>
 
 @{
-    ViewData["Title"] = "Games List";
+    ViewData["Title"] = "Lista de Juegos";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<table class="table">
+<table class="table text-white">
     <thead>
         <tr>
-            <th>ID</th>
+            @* <th>ID</th> *@
             <th>Name</th>
             <th>Description</th>
-            <th>Genre</th>
+            <th>Gener0</th>
             <th>Release Date</th>
-            <th>Players Count</th>
+            @* <th>Players Count</th> *@
             <th>Actions</th>
         </tr>
     </thead>
@@ -22,14 +22,14 @@
         @foreach (var game in Model)
         {
             <tr>
-                <td>@game.GameId</td>
+                @* <td>@game.GameId</td> *@
                 <td>@game.Name</td>
                 <td>@game.Descripcion</td>
                 <td>@game.Genero</td>
                 <td>@game.ReleaseDate.ToShortDateString()</td>
-                <td>@game.Players?.Count() ?? 0</td>
+                @* <td>@game.Players?.Count() ?? 0</td> *@
                 <td>
-                    <a href="@Url.Action("Details", new { id = game.GameId })" class="btn btn-info">Details</a>
+                    
                     <a href="@Url.Action("Edit", new { id = game.GameId })" class="btn btn-warning">Edit</a>
                     <a href="@Url.Action("Delete", new { id = game.GameId })" class="btn btn-danger">Delete</a>
                 </td>
@@ -38,4 +38,4 @@
     </tbody>
 </table>
 
-<a href="@Url.Action("Create")" class="btn btn-primary">Create New Game</a>
+<a href="@Url.Action("Create")" class="btn btn-primary">Crear Nuevo Juego</a>

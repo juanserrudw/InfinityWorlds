@@ -157,6 +157,42 @@ body {
 }
 
 
+/* Animación para el botón */
+ @keyframes animateButton {
+    0% {
+        transform: scale(1);
+        background-color: #007bff;
+    }
+    50% {
+        transform: scale(1.1);
+        background-color: #0056b3;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #007bff;
+    }
+} 
+
+/* Estilos del botón con animación */
+ .animated-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+    animation: animateButton 1s infinite;
+}
+
+.animated-button:hover {
+    background-color: #d10000;
+}
 
 
 
+  

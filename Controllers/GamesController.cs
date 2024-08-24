@@ -44,16 +44,34 @@ namespace infiniteworlds_frontend.Controllers
 
         // POST: api/Games
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("GameId,Name,Descripcion,Genero,ReleaseDate")] Game game)
+        public async Task<IActionResult> Create([Bind("GameId,Name,Descripcion,Genero,ReleaseDate,ImageFilePath")] Game game, IFormFile imageFile)
         {
             if (ModelState.IsValid)
             {
+                // Manejo de la imagen
+                if (imageFile != null && imageFile.Length > 0)
+                {
+                    // Definir la ruta para guardar la imagen
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/css/images", imageFile.FileName);
+
+                    // Guardar el archivo de imagen en la ruta especificada
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await imageFile.CopyToAsync(stream);
+                    }
+
+                    // Guardar la ruta relativa de la imagen en la propiedad ImageFilePath
+                    game.ImageFilePath = Path.Combine("css/images", imageFile.FileName);
+                }
+
+                // Guardar el objeto Game en la base de datos
                 _context.Add(game);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(game);
         }
+
 
         // PUT: api/Games/5
         [HttpPut("{id}")]

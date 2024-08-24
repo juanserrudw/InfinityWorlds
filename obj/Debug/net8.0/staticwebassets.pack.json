@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\css\\sitepage.css"
     },
     {
+      "Id": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\infiniteworlds_fronted\\wwwroot\\css\\stylegame.css",
+      "PackagePath": "staticwebassets\\css\\stylegame.css"
+    },
+    {
       "Id": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\infiniteworlds_fronted\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

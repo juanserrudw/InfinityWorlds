@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BtQ3c3wNwX0w7FYZ6BMB7Ow1/0fBwdtH13VdZiXhVws=",
+  "Hash": "Rl4L/0VW1fFy/W0E4vPCWFms9qwQtGgXIOIgdHSdaak=",
   "Source": "infiniteworlds_fronted",
   "BasePath": "_content/infiniteworlds_fronted",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\sitepage.css"
+    },
+    {
+      "Identity": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\infiniteworlds_fronted\\wwwroot\\css\\stylegame.css",
+      "SourceId": "infiniteworlds_fronted",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\infiniteworlds_fronted\\wwwroot\\",
+      "BasePath": "_content/infiniteworlds_fronted",
+      "RelativePath": "css/stylegame.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\stylegame.css"
     },
     {
       "Identity": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\infiniteworlds_fronted\\wwwroot\\favicon.ico",

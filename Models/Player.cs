@@ -22,6 +22,6 @@ namespace infiniteworlds_frontend.Models
         // Foreign Key to Game
         [ForeignKey("Game")]
         public int GameId { get; set; }
-        public Game? Game { get; set; }
+        public Game? Game { get; set; } 
     }
 }

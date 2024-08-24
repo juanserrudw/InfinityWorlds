@@ -6,41 +6,59 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<div>
-    <h2>Game Details</h2>
+<section class="Game">
+    <div class="container" id="game">
+        <div class="card text-white text-center bg-dark">
+            <div class="card-body">
+                <div class="overlay">
+                     
+                    <div class="container mt-4">
+                        <img src="~/css/images/anewdivine.png" class="d-block mx-auto centered-img w-20" alt="Imagen 2">
+                        <h2 class="section-header">Acerca de el juego</h2>
+                        
+                        <dl class="row">
+                            <dt class="col-sm-3">Name</dt>
+                            <dd class="col-sm-9">@Model.Name</dd>
+                            
+                            <dt class="col-sm-3">Description</dt>
+                            <dd class="col-sm-9">@Model.Descripcion</dd>
+                            
+                            <dt class="col-sm-3">Genero</dt>
+                            <dd class="col-sm-9">@Model.Genero</dd>
+                            
+                            <dt class="col-sm-3">Release Date</dt>
+                            <dd class="col-sm-9">@Model.ReleaseDate.ToShortDateString()</dd>
+                        </dl>
 
-    <dl class="row">
-        <dt class="col-sm-3">ID</dt>
-        <dd class="col-sm-9">@Model.GameId</dd>
+                        <!-- Botones de acción -->
+                        <a  class="btn btn-gray">Descargar Juego</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <dt class="col-sm-3">Name</dt>
-        <dd class="col-sm-9">@Model.Name</dd>
+ <style>
+    .section-header {
+        margin-bottom: 20px; /* Ajusta el valor según sea necesario */
+    }
 
-        <dt class="col-sm-3">Description</dt>
-        <dd class="col-sm-9">@Model.Descripcion</dd>
+.centered-img {
+        display: inline-block; /* Permite centrar la imagen en el contenedor */
+        background-color: white; /* Color de fondo blanco */
+        padding: 10px; /* Espacio alrededor de la imagen, opcional */
+        border-radius: 5px; /* Bordes redondeados, opcional */
+}
+.btn-gray {
+        background-color: #6c757d; /* Color gris de Bootstrap, puedes usar otro código de color si prefieres */
+        border-color: #6c757d; /* Asegura que el borde del botón sea del mismo color */
+    }
 
-        <dt class="col-sm-3">Genre</dt>
-        <dd class="col-sm-9">@Model.Genero</dd>
+    .btn-gray:hover {
+        background-color: #5a6268; /* Color gris oscuro para el estado hover */
+        border-color: #545b62; /* Borde gris oscuro para el estado hover */
+    }
 
-        <dt class="col-sm-3">Release Date</dt>
-        <dd class="col-sm-9">@Model.ReleaseDate.ToShortDateString()</dd>
-    </dl>
 
-    <h3>Players</h3>
-    <ul>
-        @if (Model.Players != null && Model.Players.Any())
-        {
-            foreach (var player in Model.Players)
-            {
-                <li>@player.Username (ID: @player.PlayerId)</li>
-            }
-        }
-        else
-        {
-            <li>No players associated with this game.</li>
-        }
-    </ul>
-
-    <a href="@Url.Action("Edit", new { id = Model.GameId })" class="btn btn-warning">Edit</a>
-    <a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>
-</div>
+</style> 

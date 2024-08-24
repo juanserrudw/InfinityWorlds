@@ -1,4 +1,5 @@
-﻿@{
+﻿@using infiniteworlds_frontend.Models
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -42,13 +43,18 @@
     </button>
 </div>
 
+
+
 <section class="services">
     <div class="container" id="game">
+       
         <div class="row">
             <div class="col-12 col-md-12 col-lg-4 mb-3">
+                <h2 class="text-white text-center my-4">Juegos Destacados</h2>
+
                 <div class="card text-white text-center bg-car1 pb-2">
                     <div class="card-body">
-                        <a href="game.html">
+                        <a asp-controller="Games" asp-action="Details" asp-route-id="1">
                             <img src="~/css/images/anewdivine.png" alt="A New Divine">
                         </a>
                     </div>
@@ -56,7 +62,42 @@
             </div>
         </div>
     </div>
+    <section class="section-featured-games">
+    <div class="container">
+        <div class="row">
+            @if (Model?.FeaturedGames != null && Model.FeaturedGames.Any())
+            {
+                @foreach (var game in Model.FeaturedGames)
+                {
+                    <div class="col-12 col-md-6 col-lg-4 mb-3">
+                        <div class="card text-center">
+                            <a href="@Url.Action("Details", "Games", new { id = game.Id })">
+                                <!-- Mostrar la imagen -->
+                                <img src="@Url.Content($"/css/images/{game.ImageFileName}")" class="card-img-top" alt="@game.Name">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">@game.Name</h5>
+                                <p class="card-text">@game.Description</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>No hay juegos destacados disponibles.</p>
+            }
+        </div>
+            <div class="d-flex justify-content-center mt-3">
+                <a href="@Url.Action("Index", "Games")" class="animated-button">Ver Todos los Juegos</a>
+            </div>
+
+
+    </div>
 </section>
+
+</section>
+
 
 <section class="section-soporte" id="section-soporte">
     <div class="container">
@@ -89,14 +130,3 @@
         </div>
     </div>
 </section>
-
-<footer class="footer text-center">
-    <div class="container">
-        <p>&copy; 2024 InfinityWorlds. Todos los derechos reservados.</p>
-        <p>
-            <a href="#">Política de Privacidad</a> |
-            <a href="#">Términos de Servicio</a> |
-            <a href="#section-soporte">Contacto</a>
-        </p>
-    </div>
-</footer>
