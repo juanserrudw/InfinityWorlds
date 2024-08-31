@@ -12,11 +12,11 @@ namespace infiniteworlds_frontend.Models
 
         public  string? Descripcion { get; set; }
         public required string Genero { get; set; }
-         public required string ImageFilePath { get; set; }
+         public  string? ImageFilePath { get; set; }
 
         public DateTime ReleaseDate { get; set; }
 
         // Relationships
-         public ICollection<Player>? Players { get; set; } 
+        //  public ICollection<Player>? Players { get; set; } 
     }
 }

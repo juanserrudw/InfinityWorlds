@@ -4,38 +4,115 @@
     ViewData["Title"] = "Lista de Juegos";
 }
 
-<h1>@ViewData["Title"]</h1>
 
-<table class="table text-white">
-    <thead>
-        <tr>
-            @* <th>ID</th> *@
-            <th>Name</th>
-            <th>Description</th>
-            <th>Gener0</th>
-            <th>Release Date</th>
-            @* <th>Players Count</th> *@
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var game in Model)
-        {
-            <tr>
-                @* <td>@game.GameId</td> *@
-                <td>@game.Name</td>
-                <td>@game.Descripcion</td>
-                <td>@game.Genero</td>
-                <td>@game.ReleaseDate.ToShortDateString()</td>
-                @* <td>@game.Players?.Count() ?? 0</td> *@
-                <td>
-                    
-                    <a href="@Url.Action("Edit", new { id = game.GameId })" class="btn btn-warning">Edit</a>
-                    <a href="@Url.Action("Delete", new { id = game.GameId })" class="btn btn-danger">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
 
-<a href="@Url.Action("Create")" class="btn btn-primary">Crear Nuevo Juego</a>
+<h1 class="mb-4">@ViewData["Title"]</h1>
+
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    @foreach (var game in Model)
+    {
+        <div class="col">
+            <div class="card h-100 bg-dark text-white">
+                <div class="card-body">
+                    <h5 class="card-title">@game.Name</h5>
+                    @if (!string.IsNullOrEmpty(game.ImageFilePath))
+                    {
+                        <img src="@game.ImageFilePath" alt="@game.Name" class="game-image">
+                    }
+                    else
+                    {
+                        <img src="/path/to/placeholder-image.jpg" alt="Placeholder" class="game-image">
+                    }
+                    <p class="card-text"><strong>Descripción:</strong> @game.Descripcion</p>
+                    <p class="card-text"><strong>Género:</strong> @game.Genero</p>
+                    <p class="card-text"><strong>Fecha de lanzamiento:</strong> @game.ReleaseDate.ToShortDateString()</p>
+                </div>
+                <div class="card-footer">
+                    <a href="@Url.Action("Edit", "Games", new { id = game.GameId })" class="btn-custom btn-edit">
+                        <i class="fas fa-edit"></i> Editar
+                    </a>
+                    <a href="@Url.Action("Delete", new { id = game.GameId })" class="btn-custom btn-delete">
+                        <i class="fas fa-trash-alt"></i> Eliminar
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<div class="mt-4">
+    <a href="@Url.Action("Create")" class="btn-create">
+        <i class="fas fa-plus"></i> Crear Nuevo Juego
+    </a>
+</div>
+
+<style>
+    .card {
+        border-radius: 15px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        border: 2px solid #2c3e50;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
+        border-color: #3498db;
+    }
+    .card-body {
+        padding: 1.25rem;
+    }
+    .card-footer {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-top: none;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-around;
+    }
+    .btn-custom {
+        border: 2px solid transparent;
+        padding: 8px 15px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        background-color: #e0e0e0;
+        color: #333;
+    }
+    .btn-custom i {
+        margin-right: 5px;
+    }
+    .btn-edit:hover {
+        border-color: #ff9800;
+        background-color: #fff;
+        color: #ff9800;
+    }
+    .btn-delete:hover {
+        border-color: #f44336;
+        background-color: #fff;
+        color: #f44336;
+    }
+    .btn-create {
+        background-color: #808080;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+    .btn-create:hover {
+        background-color: #707070;
+        border-color: #4fc3f7;
+        box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+    }
+    .game-image {
+        background-color: #e0e0e0;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+</style>

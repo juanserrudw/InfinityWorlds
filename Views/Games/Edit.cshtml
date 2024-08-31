@@ -6,42 +6,94 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<h4>Game</h4>
-<hr />
-
-<form asp-action="Edit">
-    <div class="form-group">
-        <label asp-for="Name" class="control-label"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
+<div class="card mx-auto" style="max-width: 500px; border-radius: 15px; transition: box-shadow 0.3s;">
+    <div class="card-header text-center" style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+        <h4>Editar Juego</h4>
     </div>
+    <div class="card-body">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
 
-    <div class="form-group">
-        <label asp-for="Descripcion" class="control-label"></label>
-        <textarea asp-for="Descripcion" class="form-control"></textarea>
-        <span asp-validation-for="Descripcion" class="text-danger"></span>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <textarea asp-for="Descripcion" class="form-control"></textarea>
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Genero" class="control-label"></label>
+                <input asp-for="Genero" class="form-control" />
+                <span asp-validation-for="Genero" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ReleaseDate" class="control-label"></label>
+                <input asp-for="ReleaseDate" class="form-control" type="date" />
+                <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ImageFilePath">Image URL</label>
+                <input asp-for="ImageFilePath" class="form-control" placeholder="Enter image URL" />
+                <span asp-validation-for="ImageFilePath" class="text-danger"></span>
+
+                @if (!string.IsNullOrEmpty(Model.ImageFilePath))
+                {
+                    <div class="mt-2 text-center">
+                        <img src="@Url.Content(Model.ImageFilePath)" alt="Game Image" class="img-thumbnail"
+                            style="max-width: 100%; border-radius: 15px;" />
+                    </div>
+                }
+            </div>
+
+
+            <input type="hidden" asp-for="GameId" />
+
+            <div class="form-group text-center">
+                <input type="submit" value="Guardar" class="btn-custom btn-edit" />
+                <a href="@Url.Action("Index")" class="btn-custom btn-edit">Volver</a>
+            </div>
+        </form>
     </div>
-
-    <div class="form-group">
-        <label asp-for="Genero" class="control-label"></label>
-        <input asp-for="Genero" class="form-control" />
-        <span asp-validation-for="Genero" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="ReleaseDate" class="control-label"></label>
-        <input asp-for="ReleaseDate" class="form-control" type="date" />
-        <span asp-validation-for="ReleaseDate" class="text-danger"></span>
-    </div>
-
-    <input type="hidden" asp-for="GameId" />
-
-    <div class="form-group">
-        <input type="submit" value="Save" class="btn btn-primary" />
-        <a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>
-    </div>
-</form>
+</div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <style>
+        .card:hover {
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+            /* Color de iluminación */
+        }
+
+        .btn {
+            border-radius: 20px;
+        }
+        .btn-custom {
+        border: 2px solid transparent;
+        padding: 8px 15px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        background-color: #e0e0e0;
+        color: #333;
+    }
+    .btn-custom i {
+        margin-right: 5px;
+    }
+    
+    .btn-edit:hover {
+        border-color: #00f331;
+        background-color: #fff;
+        color: #2d2d2d;
+    }
+    </style>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
