@@ -104,8 +104,72 @@ namespace infiniteworlds_fronted.Controllers
         {
             return View();
         }
+  
+    
 
+    [HttpPost]
+public async Task<IActionResult> Register(RegisterViewModel model)
+{
+    if (ModelState.IsValid)
+    {
+        var user = new IdentityUser { UserName = model.UserName, Email = model.Email };
+        var result = await _userManager.CreateAsync(user, model.Password);
 
+        if (result.Succeeded)
+        {
+            // Generar token de confirmación de correo
+            var emailConfirmationToken = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            var confirmationLink = Url.Action("ConfirmEmail", "Account", 
+                new { userId = user.Id, token = emailConfirmationToken }, Request.Scheme);
+
+            // Enviar correo de confirmación
+            await _emailSender.SendEmailAsync(user.Email, "Confirmación de Correo Electrónico", 
+                $"Por favor confirma tu cuenta haciendo clic en este enlace: <a href='{confirmationLink}'>Confirmar Email</a>");
+
+            // Redirigir a la página de confirmación
+            return RedirectToAction("RegistrationConfirmation", "Account");
+        }
+
+        // Manejar errores en la creación del usuario
+        foreach (var error in result.Errors)
+        {
+            ModelState.AddModelError(string.Empty, error.Description);
+        }
+    }
+
+    // Si el modelo no es válido, volver a la vista de registro
+    return View(model);
+}
+
+ [HttpGet]
+    public IActionResult RegistrationConfirmation()
+    {
+        return View();
+    }
+[HttpGet]
+public async Task<IActionResult> ConfirmEmail(string userId, string token)
+{
+    if (userId == null || token == null)
+    {
+        return RedirectToAction("Error", "Home");
+    }
+
+    var user = await _userManager.FindByIdAsync(userId);
+    if (user == null)
+    {
+        return RedirectToAction("Error", "Home");
+    }
+
+    var result = await _userManager.ConfirmEmailAsync(user, token);
+    if (result.Succeeded)
+    {
+        return View("ConfirmEmail");
+    }
+
+    return View("Error");
+}
+
+/* 
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
@@ -138,7 +202,7 @@ namespace infiniteworlds_fronted.Controllers
             }
 
             return View(model);
-        }
+        } */
 
 
 
