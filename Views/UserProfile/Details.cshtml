@@ -1,0 +1,22 @@
+@model infiniteworlds_fronted.Models.UserProfileViewModel
+
+<h1>Detalles del Perfil</h1>
+
+<div>
+    <h2>@Model.LastName</h2> <!-- Mostrar el apellido -->
+    <p><strong>Descripción:</strong> @Model.Description</p>
+    <p><strong>Fecha de unión:</strong> @Model.DateJoined.ToShortDateString()</p>
+    <p>
+        <strong>Imagen de perfil:</strong>
+        @if (!string.IsNullOrEmpty(Model.ProfilePictureUrl))
+        {
+            <img src="@Model.ProfilePictureUrl" alt="Imagen de perfil" class="img-thumbnail" style="max-width: 200px;" />
+        }
+        else
+        {
+            <span>No hay imagen de perfil disponible.</span>
+        }
+    </p>
+    <a asp-action="Edit" asp-route-id="@Model.UserProfileId" class="btn btn-warning">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</div>

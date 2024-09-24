@@ -1,0 +1,88 @@
+@model RegisterViewModel
+
+<div class="form-container">
+  <form class="register-form" asp-controller="Account" asp-action="Register" method="post">
+    <p class="register-text">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-user fa-stack-1x"></i>
+      </span>
+    </p>
+    
+    <!-- Campo de nombre de usuario -->
+<input type="text" asp-for="UserName" class="register-username" required="true" placeholder="Username" />
+<span asp-validation-for="UserName" class="text-danger"></span>
+
+
+    <!-- Campo de email -->
+    <input type="email" asp-for="Email" class="register-email" required="true" placeholder="Email" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+
+    <!-- Campo de contraseña -->
+    <input type="password" asp-for="Password"  class="register-password" required="true" placeholder="Password"  />
+    <span asp-validation-for="Password" class="text-danger"></span>
+
+    <!-- Campo de confirmación de contraseña -->
+    <input type="password" asp-for="ConfirmPassword" class="register-password" required="true" placeholder="Confirm Password" />
+      <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+
+    <!-- Botón de registro -->
+    <input type="submit" value="Register" class="register-submit" />
+  </form>
+
+  <!-- Puedes agregar enlaces o información adicional aquí -->
+</div>
+
+<style>
+/* Estilos del contenedor del formulario */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Estilos del formulario */
+.register-form {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  position: relative;
+}
+
+/* Estilos generales del formulario de registro */
+.register-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Icono de usuario */
+.fa-stack {
+  font-size: 2em;
+}
+
+/* Estilo de los campos de entrada */
+.register-email, .register-password, .register-username {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Estilo del botón de envío */
+.register-submit {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+</style>

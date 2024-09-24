@@ -1,0 +1,132 @@
+
+ @model LoginViewModel
+
+<div class="form-container">
+  <form class="login-form" asp-action="Login" method="post">
+    <p class="login-text">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-lock fa-stack-1x"></i>
+      </span>
+    </p>
+
+     <input type="text" asp-for="UserName" class="login-username" autofocus="true" required="true" placeholder="UserName" /> 
+    
+    <input type="email" asp-for="Email" class="login-username" autofocus="true" required="true" placeholder="Email" />
+    
+    <input type="password" asp-for="Password" class="login-password" required="true" placeholder="Password" />
+    
+    <div class="form-group">
+      <input asp-for="RememberMe" class="login-remember-me" type="checkbox" />
+      <label asp-for="RememberMe" class="login-remember-label">Remember me?</label>
+    </div>
+    
+    <input type="submit" value="Login" class="login-submit" />
+      
+
+    <p>
+        <a asp-action="ForgotPassword">¿Olvidaste tu contraseña?</a>
+    </p>
+  </form>
+
+  
+</div>
+
+<style>
+    /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+.form-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Altura de la ventana del navegador */
+  margin: 0;
+}
+
+/* Estilos del formulario */
+.login-form {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  position: relative;
+}
+
+/* Estilos generales del formulario de inicio de sesión */
+.
+
+/* Estilo del texto del formulario */
+.login-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Icono del candado */
+.fa-stack {
+  font-size: 2em;
+}
+
+/* Estilo de los campos de entrada */
+.login-username, .login-password {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Estilo del botón de envío */
+.login-submit {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estilo del checkbox y la etiqueta de "Remember me?" */
+.login-remember-me {
+  margin-right: 10px;
+}
+
+.login-remember-label {
+  font-size: 14px;
+}
+
+/* Enlace de "forgot password?" */
+.login-forgot-pass {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-forgot-pass:hover {
+  text-decoration: underline;
+}
+
+/* Estilos adicionales para la superposición */
+.underlay-photo, .underlay-black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.underlay-photo {
+  background: url('path/to/your/photo.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.3;
+}
+
+.underlay-black {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+
+</style> 

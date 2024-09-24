@@ -12,16 +12,11 @@ namespace infiniteworlds_frontend.Models
         public required string Username { get; set; }
         public required string EstadoCuenta { get; set; }
 
-        
 
-        // Foreign Key to User
-        [ForeignKey("User")]
-        public int UserId { get; set; }
-        public User? User { get; set; }
 
         // Foreign Key to Game
-        [ForeignKey("Game")]
-        public int GameId { get; set; }
-        public Game? Game { get; set; } 
+        // [ForeignKey("Game")]
+        // public int GameId { get; set; }
+        // public Game? Game { get; set; } 
     }
 }

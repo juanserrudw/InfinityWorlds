@@ -1,4 +1,7 @@
 using infiniteworlds_frontend.Data;
+using MailKit;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
 
@@ -12,11 +15,24 @@ builder.Services.AddControllers()
     });
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+
+builder.Services.AddTransient<IEmailSender, EmailSender>();
+
+
+    builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders(); 
+    
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+// Configurar envío de correos (IEmailSender)
+//builder.Services.AddTransient<IEmailSender, EmailSender>();
+
 
  builder.Services.AddSwaggerGen(c =>
 {

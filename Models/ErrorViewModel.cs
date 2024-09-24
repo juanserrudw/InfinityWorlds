@@ -1,3 +1,5 @@
+
+using System.ComponentModel.DataAnnotations;
 namespace infiniteworlds_fronted.Models;
 
 public class ErrorViewModel
