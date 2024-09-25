@@ -23,14 +23,14 @@ namespace infiniteworlds_frontend.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<UserProfileViewModel>()
-                    .HasKey(up => up.UserProfileId);
+            // modelBuilder.Entity<UserProfileViewModel>()
+            //         .HasKey(up => up.UserProfileId);
             base.OnModelCreating(modelBuilder);
-
+            // Llama a los métodos de siembra para las tablas
+            GameSeed.SeedGames(modelBuilder);
+            UserSeed.SeedUsers(modelBuilder);
+            modelBuilder.SeedAdminUser();
 
         }
-
-
-
     }
 }

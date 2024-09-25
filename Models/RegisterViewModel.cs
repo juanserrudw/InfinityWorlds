@@ -4,6 +4,7 @@ namespace infiniteworlds_fronted.Models
 {
     public class RegisterViewModel
     {
+        
         [Required(ErrorMessage = "El nombre es obligatorio.")]
         [Display(Name = "Username")]
          public required string UserName { get; set; }

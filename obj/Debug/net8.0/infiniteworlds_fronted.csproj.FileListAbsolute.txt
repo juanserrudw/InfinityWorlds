@@ -416,3 +416,4 @@ E:\laptop\Sena\Fase Ejecucion\guia7\Code\InfinityWorlds\bin\Debug\net8.0\runtime
 E:\laptop\Sena\Fase Ejecucion\guia7\Code\InfinityWorlds\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 E:\laptop\Sena\Fase Ejecucion\guia7\Code\InfinityWorlds\bin\Debug\net8.0\MailKit.dll
 E:\laptop\Sena\Fase Ejecucion\guia7\Code\InfinityWorlds\bin\Debug\net8.0\MimeKit.dll
+E:\laptop\Sena\Fase Ejecucion\guia7\Code\InfinityWorlds\bin\Debug\net8.0\Bogus.dll

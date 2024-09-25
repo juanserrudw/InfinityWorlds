@@ -24,32 +24,7 @@ namespace infiniteworlds_fronted.Controllers
         }
 
 
-        /* // Método de prueba para enviar correo
-        [HttpGet]
-        public IActionResult TestEmail()
-        {
-            var client = new SmtpClient("sandbox.smtp.mailtrap.io", 2525)
-            {
-                Credentials = new NetworkCredential("22f4710d5c4ab3", "11b365390d2813"),
-                EnableSsl = true
-            };
-
-            try
-            {
-                var mailMessage = new MailMessage("from@example.com", "to@example.com", "Test Subject", "This is a test email.");
-                mailMessage.IsBodyHtml = true;
-
-                client.Send(mailMessage);
-                ViewBag.Message = "Email sent successfully.";
-            }
-            catch (Exception ex)
-            {
-                ViewBag.Message = $"Error sending email: {ex.Message}";
-            }
-
-            return View();
-        }
-     */
+        
 
         [HttpGet]
         public IActionResult Login()
@@ -169,41 +144,6 @@ public async Task<IActionResult> ConfirmEmail(string userId, string token)
     return View("Error");
 }
 
-/* 
-        [HttpPost]
-        public async Task<IActionResult> Register(RegisterViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                var user = new IdentityUser { UserName = model.UserName, Email = model.Email };
-                var result = await _userManager.CreateAsync(user, model.Password);
-
-                if (result.Succeeded)
-                {
-                    await _signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("Index", "Home");
-                }
-
-                // Agregar registro de errores
-                foreach (var error in result.Errors)
-                {
-                    // Registrar errores para depuración
-                    Console.WriteLine(error.Description);
-                    ModelState.AddModelError("", error.Description);
-                }
-            }
-            else
-            {
-                // Registrar el estado del modelo
-                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
-                {
-                    Console.WriteLine(error.ErrorMessage);
-                }
-            }
-
-            return View(model);
-        } */
-
 
 
 
@@ -226,10 +166,10 @@ public async Task<IActionResult> ConfirmEmail(string userId, string token)
         [HttpPost]
         public async Task<IActionResult> ForgotPassword(string email)
         {
-            Console.WriteLine($"Se empeza a ejecutar el metodo forgot pasasworr: {email}");
+            
             var user = await _userManager.FindByEmailAsync(email);
-            //  bool isEmailConfirmed = await _userManager.IsEmailConfirmedAsync(user);
-            Console.WriteLine($"aquiva  encuentra el user: {user}");
+            
+           
             if (user == null)
             {
                 return RedirectToAction("ForgotPasswordConfirmation", "Account");
@@ -244,26 +184,9 @@ public async Task<IActionResult> ConfirmEmail(string userId, string token)
                 Console.WriteLine($"Correo de confirmación enviado a: {user.Email}");
                 return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
-            //Console.WriteLine($"aquiva  encuentra el is emailconfirmed: {isEmailConfirmed}");
-            //  if (user == null || !isEmailConfirmed)
-            // {
-            //     // No mostrar mensajes de error específicos por razones de seguridad
-            //     return RedirectToAction("ForgotPasswordConfirmation", "Account");
-            // } 
-            /*  if (user == null)
-     {
-         Console.WriteLine("Usuario no encontrado.");
-         return RedirectToAction("ForgotPasswordConfirmation");
-     }
+           
 
-     bool isEmailConfirmed = await _userManager.IsEmailConfirmedAsync(user);
-     if (!isEmailConfirmed)
-     {
-         Console.WriteLine("El email no está confirmado.");
-         return RedirectToAction("Account");
-     } */
-
-            Console.WriteLine("aquiva  encuentra la ejecucionnndel esot");
+            
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
             var resetLink = Url.Action("ResetPassword", "Account", new { token, email = user.Email }, Request.Scheme);
 
