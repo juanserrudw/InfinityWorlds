@@ -22,8 +22,11 @@ namespace infiniteworlds_fronted.Controllers
             _userManager = userManager;
         }
 
-        // Método para listar los perfiles de usuario desde la base de datos
+        
+    
 
+         // Método para listar los perfiles de usuario desde la base de datos
+        
         public async Task<IActionResult> Index()
         {
             // Obtenemos el Id del usuario actual
@@ -35,12 +38,13 @@ namespace infiniteworlds_fronted.Controllers
 
             if (profile == null)
             {
-                return NotFound(); // Maneja el caso en que no se encuentre el perfil
+                //return NotFound(); // Maneja el caso en que no se encuentre el perfil
+                return RedirectToAction("Create", "UserProfile");
             }
 
             return View(profile);
         }
-
+ 
         // Método para crear un nuevo perfil
         [HttpGet]
         public IActionResult Create()
@@ -52,17 +56,27 @@ namespace infiniteworlds_fronted.Controllers
 [ValidateAntiForgeryToken]
 public async Task<IActionResult> Create(UserProfileViewModel model)
 {
+    
     // Obtener el ID del usuario autenticado
     var userId = _userManager.GetUserId(User);
+    
+    if (string.IsNullOrEmpty(userId))
+    {
+        ModelState.AddModelError("", "El usuario no está autenticado.");
+        return View(model);
+    }
+
+   
 
     if (ModelState.IsValid)
     {
         try
         {
+            Console.WriteLine($"id userid {userId}");
             // Asociamos el perfil al usuario autenticado
             model.UserId = userId;
             model.DateJoined = DateTime.Now;  // Establecemos la fecha de creación
-
+             
             _context.Add(model);
             await _context.SaveChangesAsync();
 
@@ -74,6 +88,13 @@ public async Task<IActionResult> Create(UserProfileViewModel model)
             ModelState.AddModelError("", "Ocurrió un error al guardar el perfil. Inténtalo de nuevo más tarde.");
             Console.WriteLine($"Database saving error: {ex.Message}");
            
+        }
+    }else
+    {
+        //Registrar el estado del modelo si no es válido
+        foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+        {
+            Console.WriteLine(error.ErrorMessage);
         }
     }
 

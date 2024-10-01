@@ -17,119 +17,119 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = infiniteworlds_fronted
 build_property.RootNamespace = infiniteworlds_fronted
-build_property.ProjectDir = E:\laptop\Sena\Fase Ejecucion\guia7\Code\InfinityWorlds\
+build_property.ProjectDir = E:\laptop\Sena\Fase Ejecucion\guia7\Code\InfinityWorlds\InfinityWorlds\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\laptop\Sena\Fase Ejecucion\guia7\Code\InfinityWorlds
+build_property.MSBuildProjectDirectory = E:\laptop\Sena\Fase Ejecucion\guia7\Code\InfinityWorlds\InfinityWorlds
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Account/ConfirmEmail.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Account/Error.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Account/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Account/ForgotPassword.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Account/ForgotPasswordConfirmation.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Account/ForgotPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Account/Login.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Account/Logout.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Account/Register.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Account/RegistrationConfirmation.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Account/RegistrationConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RyYXRpb25Db25maXJtYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Account/ResetPassword.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Account/ResetPasswordConfirmation.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Account/ResetPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Account/TestEmail.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Account/TestEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxUZXN0RW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Games/Create.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Games/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Games/Delete.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Games/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Games/Details.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Games/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Games/Edit.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Games/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Games/Index.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Games/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Home/Index.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Home/Privacy.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Shared/Error.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/UserProfile/Create.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/UserProfile/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclByb2ZpbGVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/UserProfile/Details.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/UserProfile/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclByb2ZpbGVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/UserProfile/Edit.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/UserProfile/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclByb2ZpbGVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/UserProfile/Index.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/UserProfile/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclByb2ZpbGVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/_ViewImports.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/_ViewStart.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/Views/Shared/_Layout.cshtml]
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-txaa4omiq1

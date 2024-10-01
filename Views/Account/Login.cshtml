@@ -9,13 +9,18 @@
         <i class="fa fa-lock fa-stack-1x"></i>
       </span>
     </p>
-
-     <input type="text" asp-for="UserName" class="login-username" autofocus="true" required="true" placeholder="UserName" /> 
     
+     <input type="text" asp-for="UserName" class="login-username" autofocus="true" required="true" placeholder="UserName" /> 
+    <span asp-validation-for="UserName" class="text-danger"></span>
+   
+   
     <input type="email" asp-for="Email" class="login-username" autofocus="true" required="true" placeholder="Email" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+    
     
     <input type="password" asp-for="Password" class="login-password" required="true" placeholder="Password" />
-    
+   <span asp-validation-for="Password" class="text-danger"></span>
+
     <div class="form-group">
       <input asp-for="RememberMe" class="login-remember-me" type="checkbox" />
       <label asp-for="RememberMe" class="login-remember-label">Remember me?</label>

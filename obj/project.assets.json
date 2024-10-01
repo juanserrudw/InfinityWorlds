@@ -8838,11 +8838,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\InfinityWorlds\\infiniteworlds_fronted.csproj",
+      "projectUniqueName": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\InfinityWorlds\\InfinityWorlds\\infiniteworlds_fronted.csproj",
       "projectName": "infiniteworlds_fronted",
-      "projectPath": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\InfinityWorlds\\infiniteworlds_fronted.csproj",
+      "projectPath": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\InfinityWorlds\\InfinityWorlds\\infiniteworlds_fronted.csproj",
       "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-      "outputPath": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\InfinityWorlds\\obj\\",
+      "outputPath": "E:\\laptop\\Sena\\Fase Ejecucion\\guia7\\Code\\InfinityWorlds\\InfinityWorlds\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",

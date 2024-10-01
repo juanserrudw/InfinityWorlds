@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 
 namespace infiniteworlds_fronted.Models{
@@ -6,6 +7,7 @@ namespace infiniteworlds_fronted.Models{
     {
 
     [Key] 
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public required string UserProfileId { get; set; }
     [StringLength(100, ErrorMessage = "El apellido no puede exceder los 100 caracteres.")]
 

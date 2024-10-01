@@ -1,4 +1,95 @@
-@model infiniteworlds_fronted.Models.UserProfileViewModel
+@model UserProfileViewModel 
+
+@{
+    ViewData["Title"] = "Perfil de Usuario";
+}
+
+<h1 class="mb-4 text-center">@ViewData["Title"]</h1>
+
+<div class="card text-white bg-dark mt-5" style="width: 100%;">
+    <div class="card-header text-center">
+        <h1>@Model.LastName @Model.LastName</h1> <!-- Mostrar el nombre completo -->
+    </div>
+    <div class="card-body">
+        <h3 class="card-title">Descripción</h3>
+        <p class="card-text">@Model.Description</p>
+
+        <p>
+            <strong>Fecha de unión:</strong> @Model.DateJoined.ToShortDateString()
+        </p>
+
+        <p>
+            <strong>Imagen de perfil:</strong>
+            @if (!string.IsNullOrEmpty(Model.ProfilePictureUrl))
+            {
+                <img src="@Model.ProfilePictureUrl" alt="Imagen de perfil" class="img-thumbnail" style="max-width: 200px;" />
+            }
+            else
+            {
+                <span>No hay imagen de perfil disponible.</span>
+            }
+        </p>
+
+        <div class="d-flex justify-content-between">
+            <a href="@Url.Action("Edit", "UserProfile", new { id = Model.UserProfileId })" class="btn btn-warning">
+                <i class="fas fa-edit"></i> Editar Perfil
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+<div class="mt-4">
+    <a href="@Url.Action("Index", "Home")" class="btn btn-primary">
+        <i class="fas fa-arrow-left"></i> Volver al Inicio
+    </a>
+</div>
+
+<style>
+    .card {
+        border-radius: 15px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        border: 2px solid #2c3e50;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
+        border-color: #3498db;
+    }
+    .card-body {
+        padding: 1.25rem;
+    }
+    .card-header {
+        background-color: rgba(52, 152, 219, 0.7);
+        border-bottom: none;
+        padding: 1rem;
+    }
+    .btn {
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+    .btn-warning:hover {
+        background-color: #ff9800;
+        border-color: #ff9800;
+    }
+    .btn-danger:hover {
+        background-color: #f44336;
+        border-color: #f44336;
+    }
+    .btn-primary {
+        border-radius: 20px;
+    }
+    .img-thumbnail {
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+</style>
+
+
+
+
+@* @model IEnumerable<infiniteworlds_fronted.Models.UserProfileViewModel>
 
 <div class="card text-white bg-dark mt-5" style="width: 100%;">
     <div class="card-header text-center">
@@ -26,4 +117,4 @@
             
         </div>
     </div>
-</div>
+</div> *@

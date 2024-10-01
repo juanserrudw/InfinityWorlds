@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("infiniteworlds_fronted")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67acb6807c5c6fd5df1c47309162591126e2b552")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f1795eb529044cef7aa587cd77e7a2545b50652")]
 [assembly: System.Reflection.AssemblyProductAttribute("infiniteworlds_fronted")]
 [assembly: System.Reflection.AssemblyTitleAttribute("infiniteworlds_fronted")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
