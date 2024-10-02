@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using infiniteworlds_fronted.Models;
 
 namespace infiniteworlds_frontend.Models
 {
@@ -23,8 +24,10 @@ namespace infiniteworlds_frontend.Models
           
           [DataType(DataType.Date)]
         public DateTime ReleaseDate { get; set; }
+        public decimal Price { get; set; }
 
         // Relationships
         //  public ICollection<Player>? Players { get; set; } 
+         public virtual ICollection<PurchasedGame>? PurchasedGames { get; set; } // Relación inversa
     }
 }

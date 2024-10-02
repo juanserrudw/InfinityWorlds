@@ -70,6 +70,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxUZXN0RW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Games/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Games/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcQ2hlY2tvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Games/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -88,6 +96,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Games/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Games/MyGames.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcTXlHYW1lcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Games/Purchase.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcUHVyY2hhc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Games/PurchaseConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZXNcUHVyY2hhc2VDb25maXJtYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/laptop/Sena/Fase Ejecucion/guia7/Code/InfinityWorlds/InfinityWorlds/Views/Home/Index.cshtml]

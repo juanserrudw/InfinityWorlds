@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Confirmación de la Compra";
+}
+
+<div class="card text-center mt-5">
+    <div class="card-body">
+        <h2 class="card-title">¡Gracias por tu compra!</h2>
+        <p class="card-text">Tu transacción ha sido exitosa. Puedes revisar los juegos adquiridos en la sección de <strong>"Mis Juegos"</strong>.</p>
+        
+        <a href="@Url.Action("MyGames", "Games")" class="btn btn-success mt-3">Ver Mis Juegos</a>
+    </div>
+</div>

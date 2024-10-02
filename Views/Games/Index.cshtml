@@ -28,14 +28,23 @@
                     <p class="card-text"><strong>Género:</strong> @game.Genero</p>
                     <p class="card-text"><strong>Fecha de lanzamiento:</strong> @game.ReleaseDate.ToShortDateString()</p>
                 </div>
-                <div class="card-footer">
+                <div class="card-footer ">
+                    
                     <a href="@Url.Action("Edit", "Games", new { id = game.GameId })" class="btn-custom btn-edit">
                         <i class="fas fa-edit"></i> Editar
                     </a>
                     <a href="@Url.Action("Delete", new { id = game.GameId })" class="btn-custom btn-delete">
                         <i class="fas fa-trash-alt"></i> Eliminar
                     </a>
-                </div>
+                    </div>
+                    <form asp-controller="Games" asp-action="AddToCart" asp-route-gameId="@game.GameId" method="post" class="card-footer">
+                        <button type="submit" class="btn-custom btn-edit">
+                            <i class="fas fa-edit"></i> Agregar al Carrito
+                        </button>
+                    </form>
+
+                    
+                
             </div>
         </div>
     }
@@ -53,14 +62,17 @@
         transition: all 0.3s ease;
         border: 2px solid #2c3e50;
     }
+
     .card:hover {
         transform: translateY(-5px);
         box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
         border-color: #3498db;
     }
+
     .card-body {
         padding: 1.25rem;
     }
+
     .card-footer {
         background-color: rgba(255, 255, 255, 0.05);
         border-top: none;
@@ -68,6 +80,7 @@
         display: flex;
         justify-content: space-around;
     }
+
     .btn-custom {
         border: 2px solid transparent;
         padding: 8px 15px;
@@ -80,19 +93,23 @@
         background-color: #e0e0e0;
         color: #333;
     }
+
     .btn-custom i {
         margin-right: 5px;
     }
+
     .btn-edit:hover {
         border-color: #ff9800;
         background-color: #fff;
         color: #ff9800;
     }
+
     .btn-delete:hover {
         border-color: #f44336;
         background-color: #fff;
         color: #f44336;
     }
+
     .btn-create {
         background-color: #808080;
         color: white;
@@ -102,11 +119,13 @@
         transition: all 0.3s ease;
         border: 2px solid transparent;
     }
+
     .btn-create:hover {
         background-color: #707070;
         border-color: #4fc3f7;
         box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
     }
+
     .game-image {
         background-color: #e0e0e0;
         width: 100%;
@@ -115,4 +134,8 @@
         border-radius: 10px;
         margin-bottom: 1rem;
     }
+    .card-footer a, .card-footer form {
+    display: block;
+    margin-bottom: 10px; /* Opcional para agregar espacio entre ellos */
+}
 </style>

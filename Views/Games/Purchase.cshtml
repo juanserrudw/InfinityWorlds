@@ -1,0 +1,92 @@
+@model IEnumerable<infiniteworlds_frontend.Models.Game>
+
+@{
+    ViewData["Title"] = "Mis Juegos";
+}
+
+<div class="container d-flex flex-column justify-content-center align-items-center vh-100">
+    <h2 class="mb-4">@ViewData["Title"]</h2>
+
+    @if (Model == null || !Model.Any())
+    {
+        <!-- Tarjeta para cuando no hay juegos comprados -->
+        <div class="card text-center">
+            <div class="card-body">
+                <p class="card-text">No has comprado ningún juego.</p>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+            @foreach (var game in Model)
+            {
+                <div class="col mb-4">
+                    <div class="card h-100 bg-dark text-white shadow-sm">
+                        <!-- Cuerpo de la tarjeta -->
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-truncate">@game.Name</h5>
+                            <p class="card-text">@game.Descripcion</p>
+
+                            <!-- Pie de la tarjeta con precio y botón -->
+                            <div class="mt-auto">
+                                <p class="card-text"><strong>Precio: </strong>@game.Price.ToString("C")</p>
+                                <a asp-controller="Games" asp-action="Details" asp-route-id="@game.GameId" class="btn btn-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+<style>
+    .card {
+        border-radius: 15px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        border: 2px solid #2c3e50;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
+        border-color: #3498db;
+    }
+
+    .btn-custom {
+        border: 2px solid transparent;
+        padding: 8px 15px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        background-color: #e0e0e0;
+        color: #333;
+    }
+
+    .btn-edit:hover {
+        border-color: #ff9800;
+        background-color: #fff;
+        color: #ff9800;
+    }
+
+    .btn-create {
+        background-color: #808080;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .btn-create:hover {
+        background-color: #707070;
+        border-color: #4fc3f7;
+        box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+    }
+</style>

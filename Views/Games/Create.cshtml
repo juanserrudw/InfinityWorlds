@@ -11,8 +11,8 @@
         <h4>Crear Juego</h4>
     </div>
     <div class="card-body">
-        <form asp-action="Create" method="post" enctype="multipart/form-data"> 
-                @Html.AntiForgeryToken()
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
@@ -37,26 +37,22 @@
                 <span asp-validation-for="ReleaseDate" class="text-danger"></span>
             </div>
 
-            @* div class="form-group">
-                <label asp-for="ImageFilePath">Cargar Imagen</label>
-                <input asp-for="ImageFilePath" class="form-control" placeholder="Enter image URL" />
-                 <input type="file" name="imageFile" class="form-control" /> 
+
+            <div class="form-group">
+                <label asp-for="ImageFilePath">Cargar Imagen (URL)</label>
+                <input asp-for="ImageFilePath" class="form-control" placeholder="Ingrese la URL de la imagen" />
                 <span asp-validation-for="ImageFilePath" class="text-danger"></span>
-                 if (Model != null && !string.IsNullOrEmpty(Model.ImageFilePath))
-                {
-                    <div class="mt-2 text-center">
-                        <img src="@Url.Content(Model.ImageFilePath)" alt="Game Image" class="img-thumbnail"
-                            style="max-width: 100%; border-radius: 15px;" />
-                    </div>
-                }  
-            </@*> *@
-           <div class="form-group">
-    <label asp-for="ImageFilePath">Cargar Imagen (URL)</label>
-    <input asp-for="ImageFilePath" class="form-control" placeholder="Ingrese la URL de la imagen" />
-    <span asp-validation-for="ImageFilePath" class="text-danger"></span>
-</div>
-<br>
-             
+
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" class="form-control" type="number" step="0.01"
+                        placeholder="Ingrese el precio" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+
+            </div>
+            <br>
+
             <div class="form-group text-center">
                 <input type="submit" value="Crear" class="btn-custom btn-create" />
                 <a href="@Url.Action("Index")" class="btn-custom btn-create">Volver</a>

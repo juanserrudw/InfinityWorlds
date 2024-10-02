@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/sitepage.css" asp-append-version="true" />
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
 
     <link rel="stylesheet" href="~/css/infiniteworlds_fronted.styles.css" asp-append-version="true" />
@@ -27,7 +27,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
-                <a href="#" class="navbar-brand">InfinityWorlds</a>
+                <a href="@Url.Action("Index", "Home")" class="navbar-brand">InfinityWorlds</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS"
                     aria-controls="navbarS" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -39,11 +39,12 @@
                             <a href="#" class="nav-link">Quienes Somos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#game" class="nav-link">Juegos</a>
+                            <a href="@Url.Action("MyGames", "Games")" class="nav-link">Mis Juegos</a>
                         </li>
                         <li class="nav-item">
                             <a href="#section-soporte" class="nav-link">Soporte</a>
                         </li>
+                        
                         <li class="nav-item">
                             <a href="" class="nav-link">Noticias</a>
                         </li>
@@ -74,7 +75,8 @@
                                 {
                                     <!-- Opciones si el usuario está autenticado -->
                                     <li>
-                                        <a class="dropdown-item nav-link" asp-controller="UserProfile" asp-action="Index">Perfil</a>
+                                        <a class="dropdown-item nav-link" asp-controller="UserProfile"
+                                            asp-action="Index">Perfil</a>
                                     </li>
 
                                     <li>
