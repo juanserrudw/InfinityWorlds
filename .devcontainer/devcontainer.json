@@ -1,0 +1,14 @@
+{
+  "name": "ASP.NET MVC App",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:8.0",  
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "forwardPorts": [5000, 5001],  
+  "postCreateCommand": "dotnet restore",  // Restaura dependencias después de crear el contenedor
+  "remoteUser": "codespace"
+}
