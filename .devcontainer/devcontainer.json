@@ -1,14 +1,21 @@
 {
-  "name": "ASP.NET MVC App",
+  "name": "InfinityWorlds",
   "image": "mcr.microsoft.com/devcontainers/dotnet:8.0",  
     "vscode": {
       "extensions": [
         "ms-dotnettools.csharp",
-        "ms-azuretools.vscode-docker"
+        "ms-azuretools.vscode-docker",
+        "ms-mssql.sql-tools"
       ]
     }
   },
-  "forwardPorts": [5000, 5001],  
-  "postCreateCommand": "dotnet restore",  // Restaura dependencias después de crear el contenedor
-  "remoteUser": "codespace"
+  "forwardPorts": [8000],  
+  "postCreateCommand": "dotnet restore", // Restaura dependencias después de crear el contenedor
+"features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "remoteUser": "codespace",
+"settings": {
+    "terminal.integrated.defaultProfile.linux": "/bin/bash"
+  }
 }
