@@ -7,7 +7,7 @@
         "ms-azuretools.vscode-docker",
         "ms-mssql.sql-tools"
       ]
-    }
+    
   },
   "forwardPorts": [8000, 8001,  1433],  // Exponer puerto 1433 para SQL Server
   "postCreateCommand": "dotnet restore", // Restaura dependencias después de crear el contenedor
