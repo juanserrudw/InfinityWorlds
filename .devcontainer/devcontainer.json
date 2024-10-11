@@ -9,7 +9,7 @@
       ]
     }
   },
-  "forwardPorts": [8000],  
+  "forwardPorts": [8000, 8001],  
   "postCreateCommand": "dotnet restore", // Restaura dependencias después de crear el contenedor
 "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
