@@ -5,11 +5,11 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
 # Copiar el archivo de proyecto y restaurar las dependencias
-COPY src/infiniteworlds_frontend/*.csproj ./
+COPY src/infiniteworlds_frontend.csproj ./
 RUN dotnet restore
 
 # Copiar el resto del código de la aplicación
-COPY src/infiniteworlds_frontend/. ./
+COPY src/infiniteworlds_frontend.csproj/. ./
 
 # Compilar la aplicación
 RUN dotnet publish -c Release -o out
