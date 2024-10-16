@@ -4,9 +4,11 @@ WORKDIR /app
 
 # Instalar Apache y otras dependencias
 RUN apt-get update && \
-    apt-get install -y apache2 libapache2-mod-proxy-html && \
+    apt-get install -y apache2 && \
+    apt-get install -y libapache2-mod-proxy && \
     apt-get install -y apt-transport-https && \
     apt-get install -y sql-server-linux
+
 
 # Copiar el archivo de solución y restaurar las dependencias
 COPY *.sln ./
