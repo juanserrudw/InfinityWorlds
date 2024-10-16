@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  # Servicio para la aplicación .NET
+  web:
+    image: mcr.microsoft.com/devcontainers/dotnet:8.0
+    build:
+      context: .
+      dockerfile: Dockerfile  # Aquí se debe especificar el Dockerfile de tu aplicación
+    ports:
+      - "8000:80"   # Mapear el puerto 8000 del host al puerto 80 del contenedor
+      - "8001:81"   # Mapear el puerto 8001 del host al puerto 81 del contenedor
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development  # Configura el entorno de ASP.NET Core
+    depends_on:
+      - sql-server  # Asegura que el servicio de SQL Server esté disponible antes de iniciar
+
+  # Servicio para SQL Server
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: Jcdo1096@
+    ports:
+      - "1433:1433"  # Exponer el puerto 1433 para SQL Server
+    volumes:
+      - sql-data:/var/opt/mssql  # Persistir datos de SQL Server
+
+# Definir un volumen para la persistencia de datos
+volumes:
+  sql-data:
