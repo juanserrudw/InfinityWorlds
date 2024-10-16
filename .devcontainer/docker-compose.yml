@@ -14,6 +14,6 @@ services:
     image: mcr.microsoft.com/mssql/server:2022-latest
     environment:
       ACCEPT_EULA: "Y"         # Aceptar el acuerdo de licencia
-      MSSQL_SA_PASSWORD: "Jcdo1096@"  # Cambia la contraseña por una más segura en producción
+      MSSQL_SA_PASSWORD: "Jcdo1096@"  
     ports:
       - "1433:1433"            # Mapea el puerto 1433 del contenedor al puerto 1433
