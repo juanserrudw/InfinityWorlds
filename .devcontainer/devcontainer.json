@@ -1,18 +1,7 @@
+
+
+
 {
-  "name": "ASP.NET Core 8 Dev Container",
-  "dockerFile": "Dockerfile",
-  "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
-  },
-  "extensions": [
-    "ms-dotnettools.csharp"
-  ],
-  "postCreateCommand": "dotnet restore"
-}
-
-
-
-/*{
   "name": "InfinityWorlds",
   "image": "mcr.microsoft.com/devcontainers/dotnet:8.0",
   
@@ -54,5 +43,5 @@
   "settings": {
     "terminal.integrated.defaultProfile.linux": "bash" // Cambiar a "bash" en lugar de "/bin/bash"
   }
-}*/
+}
 
