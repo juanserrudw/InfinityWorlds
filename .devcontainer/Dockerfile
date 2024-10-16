@@ -1,12 +1,30 @@
-# Usar la imagen base de SQL Server
-FROM mcr.microsoft.com/mssql/server:2022-latest
+# Usar una imagen base de SDK de .NET para compilar la aplicación
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
-# Establecer las variables de entorno para SQL Server
-ENV ACCEPT_EULA=Y
-ENV MSSQL_SA_PASSWORD=Jcdo1096@
+# Establecer el directorio de trabajo
+WORKDIR /app
 
-# Exponer el puerto 1433 para el servicio de SQL Server
-EXPOSE 1433
+# Copiar el archivo de proyecto y restaurar las dependencias
+COPY src/infiniteworlds_frontend/*.csproj ./
+RUN dotnet restore
 
-# Comando por defecto al iniciar el contenedor
-CMD ["sqlservr"]
+# Copiar el resto del código de la aplicación
+COPY src/infiniteworlds_frontend/. ./
+
+# Compilar la aplicación
+RUN dotnet publish -c Release -o out
+
+# Usar una imagen base de runtime de .NET para ejecutar la aplicación
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+
+# Establecer el directorio de trabajo
+WORKDIR /app
+
+# Copiar los archivos compilados desde la etapa de build
+COPY --from=build /app/out ./
+
+# Exponer el puerto 80 para la aplicación
+EXPOSE 80
+
+# Definir el comando para ejecutar la aplicación
+ENTRYPOINT ["dotnet", "infiniteworlds_frontend.dll"] 
