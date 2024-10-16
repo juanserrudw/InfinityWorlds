@@ -2,7 +2,7 @@
   "name": "InfinityWorlds",
   "dockerComposeFile": "docker-compose.yml",  
   "service": "web",                           
-  "workspaceFolder": "/workspace/infiniteworlds_frontend", 
+  "workspaceFolder": "/workspace/infiniteworlds_frontend.csproj", 
   "extensions": [
     "ms-dotnettools.csharp",                   // Extensión para C#
     "ms-azuretools.vscode-docker",             // Extensión para Docker
