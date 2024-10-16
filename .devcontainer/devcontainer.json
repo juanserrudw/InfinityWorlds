@@ -1,7 +1,40 @@
-
-
-
 {
+  "name": "InfinityWorlds",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:8.0",
+  "vscode": {
+    "extensions": [
+      "ms-dotnettools.csharp",
+      "ms-azuretools.vscode-docker",
+      "ms-mssql.sql-tools"
+    ]
+  },
+  "forwardPorts": [
+    8000,
+    8001,
+    1433
+  ],
+  "postCreateCommand": "dotnet restore",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "moby": true,
+      "azureDnsAutoDetection": true,
+      "installDockerBuildx": true,
+      "installDockerComposeSwitch": true,
+      "version": "latest",
+      "dockerDashComposeVersion": "latest"
+    }
+  },
+  "remoteUser": "root",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  }
+}
+
+
+
+
+
+/*{
   "name": "InfinityWorlds",
   "image": "mcr.microsoft.com/devcontainers/dotnet:8.0",
   
@@ -43,5 +76,5 @@
   "settings": {
     "terminal.integrated.defaultProfile.linux": "bash" // Cambiar a "bash" en lugar de "/bin/bash"
   }
-}
+}*/
 
