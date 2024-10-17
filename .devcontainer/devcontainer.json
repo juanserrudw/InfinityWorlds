@@ -1,18 +1,21 @@
 {
   "name": "InfinityWorlds",
-  "dockerComposeFile": "docker-compose.yml",  
-  "service": "web",                           
-  "workspaceFolder": "/workspace/infiniteworlds_frontend.csproj", 
-  "extensions": [
-    "ms-dotnettools.csharp",                   // Extensión para C#
-    "ms-azuretools.vscode-docker",             // Extensión para Docker
-    "ms-mssql.sql-tools"                        // Extensión para SQL Server
-  ],
-  "settings": {
-    "terminal.integrated.defaultProfile.linux": "bash"  // Cambia a bash como perfil de terminal
+  "image": "mcr.microsoft.com/devcontainers/dotnet:8.0",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
-  "postCreateCommand": "dotnet restore",       // Restaura dependencias después de crear el contenedor
-  "remoteUser": "root"                         // Usuario remoto a utilizar
+  "postCreateCommand": "dotnet restore",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-mssql.mssql"
+      ]
+    }
+  },
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ]
 }
 
 
