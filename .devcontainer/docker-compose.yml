@@ -1,19 +1,13 @@
-version: '3.8'  # Especificar la versión de Docker Compose
-
+version: '3.8'
 services:
-  web:
-    build:
-      context: .              # Contexto de construcción
-      dockerfile: Dockerfile   # Nombre del archivo Dockerfile
-    ports:
-      - "8000:80"             # Mapea el puerto 80 del contenedor al puerto 8000
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development  # Configura el entorno de ASP.NET
-
-  sql-server:
+  sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
     environment:
-      ACCEPT_EULA: "Y"         # Aceptar el acuerdo de licencia
-      MSSQL_SA_PASSWORD: "Jcdo1096@"  
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      ACCEPT_EULA: "Y"
     ports:
-      - "1433:1433"            # Mapea el puerto 1433 del contenedor al puerto 1433
+      - "1433:1433"
+
+
+
