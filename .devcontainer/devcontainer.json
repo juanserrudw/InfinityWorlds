@@ -1,10 +1,15 @@
 {
   "name": "InfinityWorlds",
   "image": "mcr.microsoft.com/devcontainers/dotnet:8.0",
+
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
+  
   "postCreateCommand": "dotnet restore",
+  
+ 
+  
   "customizations": {
     "vscode": {
       "extensions": [
@@ -13,6 +18,14 @@
       ]
     }
   },
+  "remoteUser": "root",  
+  
+  "forwardPorts": [
+    8000,
+    8001,
+    1433  // Exponer puerto 1433 para SQL Server
+  ],
+
   "mounts": [
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
   ]
