@@ -24,6 +24,7 @@ namespace infiniteworlds_frontend.Controllers
         }
 
         // GET: Games
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             var games = await _context.Games.ToListAsync();
