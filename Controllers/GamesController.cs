@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.JsonPatch;
 using System.Security.Claims;
 using infiniteworlds_fronted.Models;
 using Microsoft.AspNetCore.Hosting.Server.Features;
+using Microsoft.AspNetCore.Authorization;
 
 namespace infiniteworlds_frontend.Controllers
 {
@@ -217,6 +218,7 @@ namespace infiniteworlds_frontend.Controllers
             return NoContent(); // Utiliza NoContent() para indicar que la solicitud fue exitosa pero no devuelve contenido
         }
 
+         [Authorize]
         public async Task<IActionResult> MyGames()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
